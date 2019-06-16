@@ -1,24 +1,25 @@
-# Scroller
+# NG-Scroll-Indicator
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.1.
+## Description
+This library adds a horizontal scrollbar to the top of the webpage.
 
-## Code scaffolding
+## Installation
 
-Run `ng generate component component-name --project scroller` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project scroller`.
-> Note: Don't forget to add `--project scroller` or else it will be added to the default project in your `angular.json` file. 
-
-## Build
-
-Run `ng build scroller` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Publishing
-
-After building your library with `ng build scroller`, go to the dist folder `cd dist/scroller` and run `npm publish`.
-
-## Running unit tests
-
-Run `ng test scroller` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+```node
+    npm install ng-scroll-indicator
+```
+##Usage
+  ```html
+    <scroll-indicator></scroll-indicator>
+  ```
+## Options
+* ### Color:
+  This option helps user to set the color of the scrollbar, it will take string as value.
+  **Usage**
+  ```html
+    <scroll-indicator [color]="'red'"></scroll-indicator>
+  ```
+  or
+  ```html
+    <scroll-indicator [color]="'#333'"></scroll-indicator>
+  ```
