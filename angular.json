@@ -2,5 +2,154 @@
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
   "newProjectRoot": "projects",
-  "projects": {}
+  "projects": {
+    "scroller": {
+      "projectType": "library",
+      "root": "projects/scroller",
+      "sourceRoot": "projects/scroller/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/scroller/tsconfig.lib.json",
+            "project": "projects/scroller/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/scroller/src/test.ts",
+            "tsConfig": "projects/scroller/tsconfig.spec.json",
+            "karmaConfig": "projects/scroller/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/scroller/tsconfig.lib.json",
+              "projects/scroller/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "scrollertest": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "projects/scrollertest",
+      "sourceRoot": "projects/scrollertest/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/scrollertest",
+            "index": "projects/scrollertest/src/index.html",
+            "main": "projects/scrollertest/src/main.ts",
+            "polyfills": "projects/scrollertest/src/polyfills.ts",
+            "tsConfig": "projects/scrollertest/tsconfig.app.json",
+            "aot": false,
+            "assets": [
+              "projects/scrollertest/src/favicon.ico",
+              "projects/scrollertest/src/assets"
+            ],
+            "styles": [
+              "projects/scrollertest/src/styles.css"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/scrollertest/src/environments/environment.ts",
+                  "with": "projects/scrollertest/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "scrollertest:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "scrollertest:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "scrollertest:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/scrollertest/src/test.ts",
+            "polyfills": "projects/scrollertest/src/polyfills.ts",
+            "tsConfig": "projects/scrollertest/tsconfig.spec.json",
+            "karmaConfig": "projects/scrollertest/karma.conf.js",
+            "assets": [
+              "projects/scrollertest/src/favicon.ico",
+              "projects/scrollertest/src/assets"
+            ],
+            "styles": [
+              "projects/scrollertest/src/styles.css"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/scrollertest/tsconfig.app.json",
+              "projects/scrollertest/tsconfig.spec.json",
+              "projects/scrollertest/e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/scrollertest/e2e/protractor.conf.js",
+            "devServerTarget": "scrollertest:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "scrollertest:serve:production"
+            }
+          }
+        }
+      }
+    }},
+  "defaultProject": "scroller"
 }
