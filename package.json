@@ -1,6 +1,6 @@
 {
   "name": "scroll-indicator",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "scrollerbuild": "ng build scroller"
+    "scrollerbuild": "ng build scroller && cd dist/scroller && npm publish"
   },
   "private": true,
   "dependencies": {
