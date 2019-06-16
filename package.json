@@ -9,7 +9,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "scrollerbuild": "ng build scroller && cd dist/scroller && npm publish"
+    "buildlib": "ng build ng-scroll-indicator"
   },
   "private": true,
   "dependencies": {
