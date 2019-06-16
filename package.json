@@ -2,7 +2,11 @@
   "name": "scroll-indicator-divesh",
   "version": "0.0.2",
   "author": "Divesh Panwar",
-  "git": "https://github.com/diveshpanwar/ng-scroll-indicator.git",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/diveshpanwar/ng-scroll-indicator.git"
+  },
+  "git": "",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
