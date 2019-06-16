@@ -6,7 +6,7 @@ import { ScrollerModule } from 'scroller';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
