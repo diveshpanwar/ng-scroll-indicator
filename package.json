@@ -2,6 +2,7 @@
   "name": "scroll-indicator-divesh",
   "version": "0.0.2",
   "author": "Divesh Panwar",
+  "git": "https://github.com/diveshpanwar/ng-scroll-indicator.git",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -48,5 +49,11 @@
     "tsickle": "^0.35.0",
     "tslint": "~5.15.0",
     "typescript": "~3.4.3"
-  }
+  },
+  "keywords": [
+    "Scroll Indicator",
+    "Horizontal Scrollbar",
+    "Angular Scrollbar",
+    "Scroller"
+  ]
 }
