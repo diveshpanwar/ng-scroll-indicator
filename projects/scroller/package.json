@@ -1,8 +1,19 @@
 {
   "name": "ng-scroll-indicator",
-  "version": "0.0.1",
+  "version": "0.0.5",
+  "author": "Divesh Panwar",
   "peerDependencies": {
     "@angular/common": "^8.0.1",
     "@angular/core": "^8.0.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/diveshpanwar/ng-scroll-indicator.git"
+  },
+  "keywords": [
+    "Scroll Indicator",
+    "Horizontal Scrollbar",
+    "Angular Scrollbar",
+    "Scroller"
+  ]
 }

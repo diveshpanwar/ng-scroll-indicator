@@ -2,7 +2,7 @@ import { Component, OnInit, ViewEncapsulation, ChangeDetectionStrategy, Input } 
 
 @Component({
   selector: 'scroll-indicator',
-  template: `<div class="scroll-container">
+  template: `<div class="scroll-container" [ngStyle]="{'background-color': backgroundColor, 'height': height}">
                 <div class="scroll" id="scroller" [ngStyle]="{'background-color': color}">
                 </div>
               </div>
@@ -14,6 +14,8 @@ import { Component, OnInit, ViewEncapsulation, ChangeDetectionStrategy, Input } 
 })
 export class ScrollerComponent implements OnInit {
   @Input() color: string;
+  @Input() backgroundColor: string;
+  @Input() height: string;
   constructor() { }
 
   ngOnInit() {
@@ -34,5 +36,7 @@ export class ScrollerComponent implements OnInit {
 
   private _checkInputs() {
     this.color = this.color ? this.color : '#0ad0e6';
+    this.backgroundColor = this.backgroundColor ? this.backgroundColor : 'rgba(82, 177, 152, 0.16)';
+    this.height = this.height ? this.height : '15px';
   }
 }
