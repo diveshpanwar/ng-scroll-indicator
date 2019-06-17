@@ -23,7 +23,7 @@ This library adds a horizontal scrollbar to the top of the webpage.
   ```html
     <scroll-indicator [color]="'#333'"></scroll-indicator>
   ```
-  * **backgroundColor**:
+* **backgroundColor**:
   This option helps user to set the background color of the scrollbar, it will take string as value.
   *Usage*
   ```html
@@ -33,7 +33,7 @@ This library adds a horizontal scrollbar to the top of the webpage.
   ```html
     <scroll-indicator [backgroundColor]="'#333'"></scroll-indicator>
   ```
-  * **height**:
+* **height**:
   This option helps user to set the height of the scrollbar, it will take string as value.
   *Usage*
   ```html
